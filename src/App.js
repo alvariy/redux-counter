@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Number from './components/Number'
+
 import { tsConstructorType } from '@babel/types';
 
 class App extends React.Component{
@@ -17,10 +19,11 @@ class App extends React.Component{
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-         <button onClick={() => {this.setState({number: this.state.number + 2})}}>
+          <Number numberApi={this.state}/> 
+         {/* <button onClick={() => {this.setState({number: this.state.number + 2})}}>
            Hello world
            </button>
-           <p> Number: {this.state.number}</p>
+           <p> Number: {this.state.number}</p> */}
         </header>
       </div>
     );
